@@ -24,6 +24,12 @@
             50% { box-shadow: 0 0 35px rgba(255, 215, 0, 0.8); }
             100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
         }
+        /* वायरल टेक्स्ट के लिए एनिमेशन */
+        @keyframes pulse-viral-text {
+            0% { color: rgba(255, 255, 255, 0.85); text-shadow: none; }
+            50% { color: #FFD700; text-shadow: 0 0 10px #FFD700; }
+            100% { color: rgba(255, 255, 255, 0.85); text-shadow: none; }
+        }
 
         /* --- बैकग्राउंड और सितारे --- */
         body {
@@ -113,7 +119,6 @@
             font-size: 1.1em;
             text-align: center;
             font-family: 'Lohit Devanagari', sans-serif;
-            margin-bottom: 20px;
             transition: all 0.3s ease;
         }
         .name-input::placeholder { color: #ccc; }
@@ -122,8 +127,17 @@
             border-color: #FFD700;
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
         }
-
+        
+        /* --- वायरल मैसेज स्टाइल --- */
+        .viral-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1em;
+            margin: 20px 10px;
+            animation: pulse-viral-text 3s infinite;
+        }
+        
         .share-button {
+            margin-top: 15px;
             background: #FFD700;
             color: #302b63;
             padding: 15px 40px;
@@ -144,13 +158,13 @@
             position: relative;
             z-index: 2;
             margin-top: 25px; /* शुभकामना कार्ड और विज्ञापन के बीच जगह */
-            padding: 15px;
+            padding: 10px;
             background: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             border: 1px solid rgba(255, 215, 0, 0.3);
-            max-width: 488px; /* 468px ad + padding */
+            max-width: 340px; /* 320px ad + padding */
             width: 95%;
             text-align: center;
         }
@@ -160,7 +174,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
     </style>
@@ -182,6 +196,8 @@
         <p class="prompt-text">✨ अपना नाम लिखें और दिव्य शुभकामनाएं भेजें ✨</p>
         <input type="text" id="userName" class="name-input" placeholder="आपका शुभ नाम...">
         
+        <p class="viral-text">✨ इस दिव्य संदेश को 10 लोगों के साथ शेयर करें, प्रभु आपकी मनोकामना अवश्य पूरी करेंगे! ✨</p>
+        
         <button onclick="shareWish()" class="share-button">
             ➔ शेयर करें
         </button>
@@ -191,17 +207,17 @@
     <!-- ===== विज्ञापन का सेक्शन ===== -->
     <div class="ad-container">
         <span class="ad-label">Advertisement</span>
-        <!-- यहाँ आपका विज्ञापन कोड है -->
+        <!-- यहाँ आपका नया विज्ञापन कोड है -->
         <script type="text/javascript">
             atOptions = {
-                'key' : '6206eeb897b20aaf7bd694cf1ff1e314',
+                'key' : '071766d39648b366be55849a2a7e2ac0',
                 'format' : 'iframe',
-                'height' : 60,
-                'width' : 468,
+                'height' : 50,
+                'width' : 320,
                 'params' : {}
             };
         </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/6206eeb897b20aaf7bd694cf1ff1e314/invoke.js"></script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/071766d39648b366be55849a2a7e2ac0/invoke.js"></script>
     </div>
     <!-- ===== विज्ञापन का सेक्शन खत्म ===== -->
 
